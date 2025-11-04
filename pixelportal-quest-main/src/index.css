@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 135 50% 98%;
+    --foreground: 135 50% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 135 50% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 135 50% 10%;
+
+    --primary: 135 60% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 60% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 135 30% 90%;
+    --muted-foreground: 135 20% 40%;
+
+    --accent: 200 80% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 135 20% 85%;
+    --input: 135 20% 85%;
+    --ring: 135 60% 45%;
+
+    --radius: 0.25rem;
+    
+    --grass: 135 60% 45%;
+    --dirt: 30 50% 40%;
+    --stone: 0 0% 50%;
+    --wood: 30 40% 30%;
+    --water: 200 80% 50%;
+    --sand: 40 80% 70%;
+    --snow: 0 0% 98%;
+    --ice: 200 50% 85%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 135 30% 8%;
+    --foreground: 135 30% 95%;
+
+    --card: 135 30% 10%;
+    --card-foreground: 135 30% 95%;
+
+    --popover: 135 30% 10%;
+    --popover-foreground: 135 30% 95%;
+
+    --primary: 135 50% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 50% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 135 20% 20%;
+    --muted-foreground: 135 20% 60%;
+
+    --accent: 200 70% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 135 20% 25%;
+    --input: 135 20% 25%;
+    --ring: 135 50% 55%;
+    
+    --grass: 135 50% 35%;
+    --dirt: 30 40% 30%;
+    --stone: 0 0% 40%;
+    --wood: 30 30% 25%;
+    --water: 200 70% 40%;
+    --sand: 40 70% 60%;
+    --snow: 0 0% 90%;
+    --ice: 200 40% 75%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  canvas {
+    display: block;
+  }
+}
+
+@layer utilities {
+  .minecraft-shadow {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  .minecraft-text {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
